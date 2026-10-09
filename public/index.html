@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Receptionist</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🤖 AI Receptionist</h1>
+
+    <p>Welcome to <strong>Gaurav Tech Solutions</strong></p>
+
+
+    <!-- ============================= -->
+    <!-- CHANNELS -->
+    <!-- ============================= -->
+
+    <div class="channels">
+
+        <button
+            class="channel active"
+            onclick="showChannel('chat')">
+
+            💬 AI Chat
+
+        </button>
+
+
+        <button
+            class="channel"
+            onclick="showChannel('dm')">
+
+            📩 DM Receptionist
+
+        </button>
+
+
+        <button
+            class="channel"
+            onclick="showChannel('call')">
+
+            📞 Phone Receptionist
+
+        </button>
+
+    </div>
+
+
+
+    <!-- ============================= -->
+    <!-- CUSTOMER DETAILS -->
+    <!-- ============================= -->
+
+    <div class="customer-details">
+
+        <h3>👤 Customer Details</h3>
+
+        <input
+            type="text"
+            id="customerName"
+            placeholder="Your Name"
+        >
+
+        <input
+            type="tel"
+            id="customerPhone"
+            placeholder="Phone Number"
+        >
+
+        <input
+            type="email"
+            id="customerEmail"
+            placeholder="Email Address"
+        >
+
+    </div>
+
+
+
+    <!-- ============================= -->
+    <!-- CHAT / DM AREA -->
+    <!-- ============================= -->
+
+    <div id="chatSection">
+
+        <div class="section-title">
+
+            <span>💬 AI Conversation</span>
+
+            <span class="online">
+                ● AI Online
+            </span>
+
+        </div>
+
+
+        <div id="chatBox"></div>
+
+
+        <div class="input-area">
+
+            <input
+                type="text"
+                id="messageInput"
+                placeholder="Type your message..."
+                onkeydown="handleEnter(event)"
+            >
+
+
+            <button onclick="sendMessage()">
+                Send
+            </button>
+
+
+            <button
+                id="voiceButton"
+                onclick="startVoiceInput()">
+
+                🎤
+
+            </button>
+
+        </div>
+
+
+        <p id="voiceStatus"></p>
+
+    </div>
+
+
+
+    <!-- ============================= -->
+    <!-- PHONE CALL AREA -->
+    <!-- ============================= -->
+
+    <div
+        id="callSection"
+        style="display:none;">
+
+        <div class="call-panel">
+
+            <h2>📞 Phone Receptionist</h2>
+
+            <div id="callStatus">
+
+                ☎️ Ready to receive call
+
+            </div>
+
+
+            <button
+                id="callButton"
+                onclick="startFakeCall()">
+
+                📞 Simulate Incoming Call
+
+            </button>
+
+
+            <button
+                id="endCallButton"
+                onclick="endFakeCall()"
+                style="display:none;">
+
+                🔴 End Call
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ============================= -->
+    <!-- DM INFO -->
+    <!-- ============================= -->
+
+    <div
+        id="dmSection"
+        style="display:none;">
+
+        <div class="dm-panel">
+
+            <div class="dm-header">
+
+                <div>
+
+                    <strong>📩 Customer DM</strong>
+
+                    <small>
+                        Gaurav Tech Solutions
+                    </small>
+
+                </div>
+
+                <span class="online">
+                    ● Online
+                </span>
+
+            </div>
+
+
+            <div class="dm-info">
+
+                <p>
+                    This demo represents the
+                    future WhatsApp / Instagram
+                    DM integration.
+                </p>
+
+                <p>
+                    Customer messages are handled
+                    by the same AI receptionist.
+                </p>
+
+            </div>
+
+
+            <button
+                onclick="activateDM()"
+                class="dm-button">
+
+                🚀 Start DM Conversation
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

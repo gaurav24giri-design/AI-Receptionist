@@ -1,0 +1,23 @@
+{
+  "name": "ai-receptionist",
+  "version": "1.0.0",
+  "description": "AI Receptionist for Gaurav Tech Solutions",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "Gaurav Giri",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.6",
+    "express": "^5.2.1",
+    "nodemailer": "^10.0.16",
+    "openai": "^7.30.1"
+  },
+  "devDependencies": {
+    "wrangler": "^4.148.0"
+  }
+}

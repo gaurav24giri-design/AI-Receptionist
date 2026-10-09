@@ -1,0 +1,39 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+
+  "name": "ai-receptionist-backend",
+
+  "main": "src/index.ts",
+
+  "compatibility_date": "2026-10-06",
+
+  "compatibility_flags": [
+    "global_fetch_strictly_public"
+  ],
+
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": [
+      "/api/*"
+    ]
+  },
+
+  "ai": {
+    "binding": "AI"
+  },
+
+  "d1_databases": [
+    {
+      "binding": "ai_receptionist_db",
+      "database_name": "ai-receptionist-db",
+      "database_id": "d4a57f1e-72a5-4e41-9e66-379b8a0c9b89"
+    }
+  ],
+
+  "observability": {
+    "enabled": true
+  },
+
+  "upload_source_maps": true
+}
